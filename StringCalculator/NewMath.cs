@@ -8,21 +8,6 @@ namespace StringCalculator
 {
     class NewMath
     {
-        public void runAllFunctions()
-        {
-            var met = typeof(Math).GetMethods();
-
-            foreach (var methodInfo in met)
-            {
-                Console.WriteLine(methodInfo.Name);
-                var param = methodInfo.GetParameters();
-                foreach (var parameterInfo in param)
-                {
-                    Console.WriteLine(parameterInfo.Name);
-                    Console.WriteLine(parameterInfo.ParameterType);
-                }
-            }
-        }
 
         public static bool IsFunctionExiste(string sv)
         {
