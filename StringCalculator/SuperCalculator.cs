@@ -10,6 +10,8 @@ namespace StringCalculator
     {
         public string Execute(string myString)
         {
+            myString = myString.Replace(" ", "");
+
             string retour = "";
             while (myString.Length > 0)
             {
@@ -50,10 +52,7 @@ namespace StringCalculator
             for (int i = 0; i < myString.Length; i++)
             {
                 char c = myString[i];
-
-                if (char.IsWhiteSpace(c))
-                    continue;
-
+                
                 if (c.Equals(')'))
                 {
                     if (i >= 0 && !NewMath.IsFunctionExiste(cleanString))
@@ -64,8 +63,9 @@ namespace StringCalculator
                 }
                 if (dansLaParenthese)
                 {
-                    cleanString += c;
                     indexEnd += 1;
+                    
+                    cleanString += c;
                 }
                 else if (indexEnd == 0)
                 {
