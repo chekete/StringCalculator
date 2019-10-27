@@ -130,7 +130,7 @@ namespace StringCalculator
             if (result == null)
                 Console.WriteLine("Mauvais string");
 
-            return result.svalue;
+            return result.Svalue;
         }
 
 
@@ -146,16 +146,16 @@ namespace StringCalculator
                     {
                         int ind = lNext.IndexOf(arithme);
 
-                        double.TryParse(lNext[ind - 1].svalue, out double val1);
-                        double.TryParse(lNext[ind + 1].svalue, out double val2);
+                        double.TryParse(lNext[ind - 1].Svalue, out double val1);
+                        double.TryParse(lNext[ind + 1].Svalue, out double val2);
 
-                        if (NewMath.IsFunctionExiste(lNext[ind - 1].svalue))
+                        if (NewMath.IsFunctionExiste(lNext[ind - 1].Svalue))
                         {
-                            double.TryParse(NewMath.ExecuteFunction(lNext[ind - 1].svalue), out val1);
+                            double.TryParse(NewMath.ExecuteFunction(lNext[ind - 1].Svalue), out val1);
                         }
-                        if (NewMath.IsFunctionExiste(lNext[ind + 1].svalue))
+                        if (NewMath.IsFunctionExiste(lNext[ind + 1].Svalue))
                         {
-                            double.TryParse(NewMath.ExecuteFunction(lNext[ind + 1].svalue), out val2);
+                            double.TryParse(NewMath.ExecuteFunction(lNext[ind + 1].Svalue), out val2);
                         }
 
                         var res = Calculate(val1, val2, arithme.Operation.Signe);
@@ -176,9 +176,9 @@ namespace StringCalculator
             {
                 try
                 {
-                    if (NewMath.IsFunctionExiste(lNext[0].svalue))
+                    if (NewMath.IsFunctionExiste(lNext[0].Svalue))
                     {
-                        string result = NewMath.ExecuteFunction(lNext[0].svalue);
+                        string result = NewMath.ExecuteFunction(lNext[0].Svalue);
                         lNext.Clear();
                         lNext.Add(new Arithme(result, null));
                     }

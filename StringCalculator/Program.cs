@@ -24,18 +24,6 @@ namespace StringCalculator
                 Console.WriteLine(string.Format($"{keyTap} = {sc.Execute(keyTap)}"));
             }
 
-
-            sc.Execute("sqrt(4) +25");
-            sc.Execute("sqrt(4)");
-            sc.Execute("sqrt((4");
-            sc.Execute("sqrt((4)))");
-            sc.Execute("pow(2, 8)");
-            sc.Execute("sqrt(4)+2");
-            sc.Execute("(-1)+(-12+3*2+1/2)+1");
-            sc.Execute("(-1)+((-12+3*2+1/2))+1");
-            sc.Execute("2.8*3-1");
-
-            Console.ReadKey();
         }
     }
 }

@@ -8,11 +8,11 @@ namespace StringCalculator
 {
     class Arithme
     {
-        public string svalue { get; set; }
+        public string Svalue { get; set; }
         public Operator Operation;
         public Arithme(string s, Operator o)
         {
-            svalue = s;
+            Svalue = s;
             Operation = o;
         }
     }
